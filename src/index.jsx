@@ -6,12 +6,8 @@ import { ThemeProvider } from 'react-hook-theme'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider
-    options={{
-      theme: 'light',
-      save: true,
-    }}>
-    <App />
+    <ThemeProvider>
+          <App />
     </ThemeProvider>
   </React.StrictMode>,
 )
