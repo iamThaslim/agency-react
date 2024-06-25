@@ -206,7 +206,7 @@ const Contact = () => {
                 </div>
 
                 <button className="btn btn-neutral mt-6 w-full transform px-6 py-3 text-sm font-medium capitalize duration-300  ">
-                  get in touch
+                  stay in touch
                 </button>
               </form>
             </div>
