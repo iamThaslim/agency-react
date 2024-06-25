@@ -8,7 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider
     options={{
-      theme: 'dark',
+      theme: 'light',
       save: true,
     }}>
     <App />
