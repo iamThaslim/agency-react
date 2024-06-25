@@ -70,7 +70,7 @@ const Testimonial = () => {
             disableOnInteraction: true,
           }}
           modules={[Navigation, Autoplay, Pagination, Mousewheel, Keyboard]}
-          className="container mx-4 h-96 rounded-xl max-sm:max-w-sm border border-base-content/10">
+          className="container outline outline-customBlue3 mx-4 h-96 rounded-xl max-sm:max-w-sm border border-base-content/10">
           {testimonials.map((item, index) => (
             <SwiperSlide className="h-full" key={index}>
               <div className="flex h-full items-center justify-center">

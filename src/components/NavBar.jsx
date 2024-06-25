@@ -11,13 +11,18 @@ const navigation = [
 ]
 const NavBar = () => {
   const [active, setActive] = useState("Home")
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen)
+  }
 
   return (
     <div className="sticky  top-0 z-50 flex justify-center py-4">
-      <div className="navbar max-w-xs rounded-full bg-base-100/90 py-0 shadow-2xl outline outline-sky-100 backdrop-blur md:max-w-4xl">
+      <div className="navbar max-w-xs rounded-full bg-base-100/90 py-0 shadow-2xl outline outline-customBlue4 backdrop-blur md:max-w-4xl">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-circle btn-ghost lg:hidden ">
+            <div tabIndex={0} role="button" className="btn btn-circle btn-ghost lg:hidden" onClick={handleDropdownToggle}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -32,17 +37,19 @@ const NavBar = () => {
                 />
               </svg>
             </div>
-            <ul className="menu dropdown-content menu-md z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 shadow">
-              {navigation.map((item, index) => (
-                <li key={index}>
-                  <a key={item.name} href={item.href} className="font-urbanist">
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {dropdownOpen && (
+              <ul className="menu dropdown-content menu-md z-[1] mt-3 w-52 gap-2 rounded-box bg-customBlue1 p-2 shadow">
+                {navigation.map((item, index) => (
+                  <li key={index}>
+                    <a key={item.name} href={item.href} className="font-urbanist" onClick={() => setDropdownOpen(false)}>
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-          <a href="/" className="btn  btn-ghost rounded-full font-urbanist text-lg font-semibold">
+          <a href="/" className="btn hover:bg-customBlue4 hover:text-white btn-ghost rounded-full font-urbanist text-lg font-semibold">
             EDSKAI
           </a>
         </div>
@@ -52,9 +59,8 @@ const NavBar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className={`btn btn-ghost rounded-full font-urbanist text-sm font-light ${
-                  active === item.name ? "bg-blue-300" : ""
-                }`}
+                className={`btn btn-ghost rounded-full font-urbanist text-sm font-light ${active === item.name ? "bg-blue-300 text-white" : ""
+                  }`}
                 onClick={() => setActive(item.name)}>
                 {item.name}
               </a>
