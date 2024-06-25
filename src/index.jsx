@@ -7,7 +7,7 @@ import { ThemeProvider } from 'react-hook-theme'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>
-          <App />
+    <App />
     </ThemeProvider>
   </React.StrictMode>,
 )

@@ -64,23 +64,17 @@ const team = [
 
 const Team = () => {
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
+    <div
       id="team"
       className="flex flex-col items-center justify-center">
-      <motion.div
-        variants={fadeIn("up", "tween", 0.2, 1)}
+      <div
         className="flex flex-col items-center justify-center">
         <h1 className="font-urbanist text-center text-2xl font-semibold md:text-5xl">Meet Our Instructors</h1>
         <span className="text-md font-urbanist mt-4 px-2 text-center md:mt-4 md:px-5 md:text-xl">
           Guiding You To Excellence
         </span>
-      </motion.div>
-      <motion.div
-        variants={fadeIn("up", "tween", 0.2, 1)}
+      </div>
+      <div
         className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
         {team.map((item, index) => (
           <div key={index} className="card w-80 border border-base-content/10 shadow-sm lg:w-96">
@@ -93,8 +87,8 @@ const Team = () => {
             </div>
           </div>
         ))}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }
 

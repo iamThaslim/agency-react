@@ -63,7 +63,7 @@ const NavBar = () => {
         </div>
 
         {/* <div className="navbar-end h-10 scale-75">
-          <Toggle />
+          <img className="h-20 w-24" src="/images/icons/logo-edskai.png" alt="edskai logo" />
         </div> */}
       </div>
     </div>
