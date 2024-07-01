@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Toggle } from "react-hook-theme"
 import "react-hook-theme/dist/styles/style.css"
 
 const navigation = [
@@ -18,7 +17,7 @@ const NavBar = () => {
   }
 
   return (
-    <div className="sticky  top-0 z-50 flex justify-center py-4">
+    <div className="sticky top-0 z-50 flex justify-center py-4">
       <div className="navbar max-w-xs rounded-full bg-base-100/90 py-0 shadow-2xl outline outline-customBlue4 backdrop-blur md:max-w-4xl">
         <div className="navbar-start">
           <div className="dropdown">
@@ -67,10 +66,6 @@ const NavBar = () => {
             </nav>
           ))}
         </div>
-
-        {/* <div className="navbar-end h-10 scale-75">
-          <img className="h-20 w-24" src="/images/icons/logo-edskai.png" alt="edskai logo" />
-        </div> */}
       </div>
     </div>
   )
